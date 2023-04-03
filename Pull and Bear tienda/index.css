@@ -1,0 +1,359 @@
+/*HOME*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-home {
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "images images images images"
+    "footer footer footer footer"; 
+    min-width: 100vw;
+    min-height: 100vh; 
+}
+
+.menu {
+    grid-area: "header";
+    min-height: 100px;
+    border: 2px black solid
+}
+
+.images {
+    grid-area: "images";
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.image-woman {
+    width: 1000px; height: 1000px;
+    align-items: center;
+    display: flex;
+    background-color: blueviolet;
+}
+
+.image-man {
+    width: 1000px; height: 1000px;
+    align-items: center;
+    display: flex;
+    background-color: pink;
+}
+
+.image-man img {
+    object-fit: cover;
+    width: 100%; height: 100%;
+
+}
+
+.image-woman img {
+    object-fit: cover;
+    width: 100%; height: 100%;
+}
+
+
+/*MEDIA QUERY HOME*/ 
+@media (max-width: 850px) {
+    .images {
+        flex-direction: column; 
+        min-width: 50px; min-height: 50px;
+    }
+
+    .image-woman {
+        width: 100%; height: 80%;
+    }
+    
+    .image-man {
+        width: 100%; height: 80%;
+    }
+}
+
+/*PRODUCTS*/
+
+.container-products {
+    display: grid;
+    grid-template-areas: 
+    "header header header header header header"
+    "slider slider slider slider slider slider"
+    "main main main main main main"
+    "footer footer footer footer footer";
+    max-width: 100vw;
+    max-height: 100vh; 
+}
+
+.slider img {
+    height: 100%;
+    width: 100%;   
+    object-fit: cover;
+}
+
+.slider {
+    grid-area: "slider";
+    width: 100%;
+    height: 300px;
+    padding-bottom: 70px;
+}
+
+.main {
+    grid-area: "main";
+    display: grid;
+    grid-template-areas: 
+    "filter products products products products products"
+    "filter products products products products products"
+    "filter products products products products products";
+}
+
+.filter {
+    grid-area: "filter";
+    grid-template-columns: 1fr;
+    padding-left: 30px;
+  
+}
+
+.products {
+    grid-area: "products";
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.products {
+    display: flex; 
+    flex-direction: row; 
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.product-image img {
+    width: 60%; height: 60%;
+    padding-bottom: 10px;
+
+}
+
+.main {
+    padding-bottom: 70px;
+
+}
+
+.products {
+    text-align: center;
+}
+
+.price {
+    padding-bottom: 30px;
+}
+
+
+/*MEDIA QUERY PRODUCTS*/ 
+@media (max-width: 850px) {
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px; 
+    }
+
+    .slider {
+        padding-bottom: 10px;
+    }
+
+    .filter {
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+    }
+
+    .products {
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/*FOOTER*/ 
+
+/* OTRA FORMA DE HACER EL FOOTER
+
+.footer {
+    display: flex;
+    grid-area: "footer";
+    min-height: 100px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-image: url(image\ 24.png);
+
+
+}
+
+
+.ayuda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 300px;
+    min-height: 50px;
+}
+
+.empresa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 300px;
+    min-height:50px;
+    
+}
+
+.follow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 300px;
+    min-height:50px;
+}
+
+@media (min-width:1800) {
+
+    .footer{flex-direction: 
+        column;
+    }
+}
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+*{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    height: 130px;
+    width: 100%;
+    justify-content: center;
+    align-items:center;
+    padding-bottom: 20px;
+
+}
+
+
+
+.ayuda{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 20px;
+    padding-bottom: 5px;
+    
+
+    
+}
+
+ 
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+  }
+
+
+
+
+
+.empresa{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height:28px;
+ 
+    
+}
+
+.follow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 20px;
+    padding-top: 10px;
+    
+}
+
+.titles{
+    font-size: 13px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.iconos-rrss{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.iconos-rrss svg{
+    color: rgb(41, 42, 38);
+    height: 20px;
+    width: 20px;
+    margin-left: 20px;
+
+
+}
+
+hr { border: 1px inset rgb(133, 129, 129); height: 1px; width: 100%
+}
+
+
+
+
+/* MEDIA QUERY FOOTER */
+
+@media(min-width: 450px) { 
+    
+    .titles{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+hr{
+    display: none;
+}
+    
+}
